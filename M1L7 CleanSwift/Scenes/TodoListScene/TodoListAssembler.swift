@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TaskManagerModule
+import TaskManagePackage
 
 final class TodoListAssembler {
 

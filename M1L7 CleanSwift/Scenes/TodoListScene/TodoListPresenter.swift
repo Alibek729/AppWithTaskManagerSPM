@@ -4,7 +4,8 @@
 //
 //  Created by Alibek Kozhambekov on 15.06.2023.
 
-import TaskManagerModule
+import Foundation
+import TaskManagePackage
 
 protocol ITodoListPresenter {
 	func present(responce: TodoListModel.Responce)
