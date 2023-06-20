@@ -16,10 +16,20 @@ class LoginViewController: UIViewController {
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
 
-	@IBOutlet weak var textFieldLogin: UITextField!
-	@IBOutlet weak var textFieldPassword: UITextField!
+	var loginText: String {
+		set { textFieldLogin.text = newValue }
+		get { textFieldLogin.text ?? ""}
+	}
 
-	@IBAction func loginPressed(_ sender: UIButton) {
+	var passText: String {
+		set { textFieldPassword.text = newValue }
+		get { textFieldPassword.text ?? ""}
+	}
+
+	@IBOutlet private weak var textFieldLogin: UITextField!
+	@IBOutlet private weak var textFieldPassword: UITextField!
+
+	@IBAction func loginPressed(_ sender: Any) {
 
 		if let email = textFieldLogin.text, let password = textFieldPassword.text {
 			let request = LoginModels.Request(login: email, password: password)
